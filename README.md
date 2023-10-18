@@ -1,24 +1,11 @@
-# hoonfront
+# HoonLog Front
 
-## Project setup
-```
-npm install
-```
+---
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- 블로그 시작 계기
 
-### Compiles and minifies for production
-```
-npm run build
-```
+나만의 홈서버를 구축하고, 그 위에 개별적으로 사용할 수 있는 내 기술 블로그를 만들어 보는것이 내 프로그래밍의 첫 버킷리스트중 하나였기에 이제는 충분히 가능한 역량이다 싶어서 시작하게되었습니다.
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Why Vue3 ?
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+리액트도 경험을 해보았으나 개인적으로 컴포넌트를 생성하고, 각 메서드들이나 Props 를 관리하는게 Vue3가 더 깔끔해보였고, Option API 때와 달리 Composition API 를 쓰게되면서 코드가 간결하다 라는 느낌을 받았고 또한 SPA 로서 보다 빠른 렌더링을 경험해보고자 Vue3를 채택했습니다.
