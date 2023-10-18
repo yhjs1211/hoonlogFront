@@ -10,7 +10,12 @@
       <span class="arrow-prev"></span>
     </button>
     <div v-for="(img, idx) in images" :key="idx" class="image">
-      <img :src="img" alt="hoonImg" class="absolute col-span-4" />
+      <img
+        :src="img"
+        alt="hoonImg"
+        className="absolute col-span-4"
+        :class="{ active: idx === currentIdx }"
+      />
     </div>
     <button @click="nextImg" class="col-span-1 nextBtn">
       <span class="arrow-next"></span>
@@ -50,11 +55,17 @@ const nextImg = () => {
 }
 
 .image {
-  width: 100%;
+  width: 700px;
 }
 
 .image img {
-  width: 700px;
+  width: 100%;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.image img.active {
+  opacity: 1;
 }
 
 .arrow-prev,
