@@ -1,25 +1,16 @@
 <template>
-  <div class="welcome">
+  <div
+    class="welcome animate__animated animate__bounce animate__slower animate__infinite animate__delay-2s"
+  >
     <h1 class="text-3xl">Welcome to Hoonlog</h1>
     <p>여행을 사랑하는 개발자, 정 영훈</p>
   </div>
   <div
-    class="relative grid w-full grid-flow-col grid-cols-6 image-container place-content-center"
+    class="relative flex flex-row w-full h-full image-container place-content-center"
   >
-    <button @click="prevImg" class="col-span-1 prevBtn">
-      <span class="arrow-prev"></span>
-    </button>
-    <div v-for="(img, idx) in images" :key="idx" class="image">
-      <img
-        :src="img"
-        alt="hoonImg"
-        className="absolute col-span-4"
-        :class="{ active: idx === currentIdx }"
-      />
+    <div v-for="(img, idx) in images" :key="idx" class="absolute image">
+      <img :src="img" alt="hoonImg" :class="{ active: idx === currentIdx }" />
     </div>
-    <button @click="nextImg" class="col-span-1 nextBtn">
-      <span class="arrow-next"></span>
-    </button>
   </div>
 </template>
 
@@ -37,21 +28,16 @@ const images = ref([
 
 const currentIdx = ref(0);
 
-const prevImg = () => {
-  currentIdx.value =
-    currentIdx.value - 1 < 0 ? images.value.length - 1 : currentIdx.value - 1;
-  console.log(currentIdx.value);
-};
-
 const nextImg = () => {
   currentIdx.value = (currentIdx.value + 1) % images.value.length;
-  console.log(currentIdx.value);
 };
+
+setInterval(nextImg, 2500);
 </script>
 
 <style scoped>
 .welcome {
-  margin: 30px 0 30px 0;
+  margin: 40px 0 30px 0;
 }
 
 .image {
@@ -60,8 +46,9 @@ const nextImg = () => {
 
 .image img {
   width: 100%;
-  transition: opacity 0.5s;
+  transition: opacity 1s;
   opacity: 0;
+  border-radius: 20px;
 }
 
 .image img.active {

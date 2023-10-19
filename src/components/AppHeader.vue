@@ -76,8 +76,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from "vue";
-const props = defineProps(["msg"]);
+import { ref } from "vue";
 
 const admin = ref(false);
 
