@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-2 bg-slate-400">
+  <footer class="fixed py-2 bg-slate-400">
     <div class="flex flex-row items-center footer-content">
       <div
         class="text-3xl font-bold footer-title basis-1/4 animate__animated animate__pulse"
@@ -28,7 +28,6 @@ import { ref } from "vue";
 
 <style scoped>
 footer {
-  position: fixed;
   bottom: 0;
   width: 100%;
 }

@@ -1,7 +1,8 @@
-import MarkdownEditor from "../components/MarkdownEditor.vue";
+import AppMarkdownEditor from "../components/AppMarkdownEditor.vue";
 import AppPortfolio from "@/components/AppPortfolio.vue";
 import AppResume from "@/components/AppResume.vue";
 import AppMain from "@/components/AppMain.vue";
+import AppPost from "@/components/AppPost.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
@@ -15,19 +16,22 @@ const router = createRouter({
     {
       name: "mdEditor",
       path: "/editor",
-      component: MarkdownEditor,
+      component: AppMarkdownEditor,
     },
     {
       name: "portfolio",
       path: "/portfolio",
       component: AppPortfolio,
-      beforeEnter: () => {},
     },
     {
       name: "resume",
       path: "/resume",
       component: AppResume,
-      beforeEnter: () => {},
+    },
+    {
+      name: "posts",
+      path: "/posts",
+      component: AppPost,
     },
   ],
 });

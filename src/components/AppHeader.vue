@@ -18,6 +18,12 @@
           </div>
         </a>
         <RouterLink
+          to="/posts"
+          class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+        >
+          Posts
+        </RouterLink>
+        <RouterLink
           to="/resume"
           class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
         >
@@ -29,6 +35,7 @@
         >
           Portfolio
         </RouterLink>
+        <!-- Admin -->
         <RouterLink
           to="/editor"
           class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"

@@ -1,8 +1,10 @@
 <template>
   <AppHeader />
-  <div class="relative content">
-    <RouterView />
-  </div>
+  <Suspense>
+    <div class="content">
+      <RouterView />
+    </div>
+  </Suspense>
   <AppFooter />
 </template>
 
