@@ -17,6 +17,7 @@
         {{ tag.data }}
       </div>
     </div>
+    <AppPostDetail />
     <Card :cards="cards" />
   </div>
 </template>
@@ -24,8 +25,10 @@
 <script setup>
 import { inject, defineComponent, ref, watch, watchEffect } from "vue";
 import AppCard from "./AppCard.vue";
-
+import AppPostDetail from "./AppPostDetail.vue";
 const Card = defineComponent(AppCard);
+const PostDetail = defineComponent(AppPostDetail);
+
 const axios = inject("$axios");
 const tagId = ref(undefined);
 const cards = ref(await getAllPosts());
